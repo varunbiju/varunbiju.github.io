@@ -1,0 +1,355 @@
+<!-- Save this as index.html and open in your browser -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio Website</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* Header */
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    header h1{
+      font-size:28px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background:linear-gradient(to right,#0f172a,#1e293b);
+      color:white;
+      padding:20px;
+    }
+
+    /* Profile Image */
+    .profile-pic{
+  width:180px;
+  height:180px;
+  border-radius:12px;
+  object-fit:cover;
+  border:4px solid white;
+  margin-bottom:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:700px;
+    }
+
+    /* Button */
+    .btn{
+      margin-top:25px;
+      display:inline-block;
+      padding:12px 24px;
+      background:#38bdf8;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0284c7;
+    }
+
+    /* General Section */
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      font-size:36px;
+      margin-bottom:30px;
+      text-align:center;
+      color:#0f172a;
+    }
+
+    /* About Section */
+    .about{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+
+    .about p{
+      max-width:800px;
+      font-size:18px;
+    }
+
+    /* Projects */
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .project-card h3{
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    /* Contact Form */
+    .contact-form{
+      max-width:600px;
+      margin:auto;
+      background:white;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:15px;
+      border:1px solid #ccc;
+      border-radius:8px;
+    }
+
+    .contact-form button{
+      width:100%;
+      padding:12px;
+      border:none;
+      background:#0f172a;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .contact-form button:hover{
+      background:#1e293b;
+    }
+
+    /* Footer */
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* Mobile Responsive */
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      nav{
+        display:none;
+      }
+
+      .profile-pic{
+        width:140px;
+        height:140px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+
+    <h1>Varun Biju</h1>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+
+    <!-- Profile Image -->
+    <img src="varun.jpg" alt="Profile Photo" class="profile-pic">
+
+    <h2>Hello, I'm Varun biju</h2>
+
+    <p>
+      Electronics and IoT enthusiast, web technologies, hardware assembling and innovative engineering solutions.
+    </p>
+
+    <a href="#projects" class="btn">View Projects</a>
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <p>
+        I am a beginner web developer and engineering graduate interested in
+        IoT, and software development. I enjoy building
+        practical projects and continuously learning modern technologies.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+        <h3>Weather Station For Mushroom Cultivation </h3>
+
+        <p>
+        A device to control temperature and humidity for agriculture using Arduino, Sensors, TFT LCD Touch Screen 
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Gesture Controlled Robotic Arm </h3>
+
+        <p>
+         Engineered a gesture-controlled robotic
+          arm utilizing ESP8266, sensors, and servo motor drivers; modernized industrial workflows by increasing operational efficiency, accuracy, and reliability.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Autonomous Smart Cart With Robotic Arm And Automated Billing</h3>
+
+        <p>
+          Engineered hardware architecture for an autonomous smart cart using Raspberry Pi 5, ESP32, and Arduino Uno; integrated 2D LiDAR navigation and ArUco markers to automate pick-and-place with a 5 DOF robotic arm to streamline automated logistics and billing, significantly reducing human labor.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-form">
+
+      <form id="form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+
+    <p>A place where someone still thinks of you is a place you call home.  </p>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+
+    // Contact Form Message
+    document.getElementById("form").addEventListener("submit", function(e){
+
+      e.preventDefault();
+
+      alert("Message sent successfully!");
+
+    });
+
+  </script>
+
+</body>
+</html>
