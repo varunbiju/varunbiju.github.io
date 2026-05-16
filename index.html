@@ -314,13 +314,14 @@
 
     <div class="contact-form">
 
-      <form id="form">
+      <form action="https://formspree.io/f/mlgvrrkz" method="POST">
 
-        <input type="text" placeholder="Your Name" required>
+        <input type="text" name="name" placeholder="Your Name" required>
 
-        <input type="email" placeholder="Your Email" required>
+        <input type="email" name="email" placeholder="Your Email" required>
 
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
 
         <button type="submit">Send Message</button>
 
@@ -338,18 +339,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script>
-
-    // Contact Form Message
-    document.getElementById("form").addEventListener("submit", function(e){
-
-      e.preventDefault();
-
-      alert("Message sent successfully!");
-
-    });
-
-  </script>
+  
 
 </body>
 </html>
